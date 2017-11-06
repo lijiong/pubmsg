@@ -47,7 +47,68 @@ return messageid or topicid under this topic.
 
 ## application
 
-http://xxx/view/t123
+### case1:im
+#### 1V1
+post message topic:<u1-u2>
+
+pull topic:<u1-u2>
+
+#### nVn
+create topic1 perm:rw(u1,u2,u3,u4) 
+post message topic1
+pull topic1
+list topic range:() /time off num
+return nextoff
+
+#### get my topic list
+permlist
+
+### case2:bbs
+#### create topic 
+post topic sub-topic
+
+#### create sub topic
+
+#### create a message
+post topic message
+
+#### create a reply
+post message message
+
+#### list topic
+
+#### list message
+
+#### list reply
+
+### case3:twitter
+
+#### create self topic
+
+#### post a message
+
+#### subscribe a topic
+create super_topic
+post super_topic topic
+
+#### list feed
+pull super_topic
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
