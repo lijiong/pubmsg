@@ -66,19 +66,16 @@ class MesssageServer:
 class IMClient:
     def __init__(self):
 
-    def create_account():
-        client_.create_user()
-        client_.create_topic("group_message")
-        client_.create_topic("friend_message")
-
+    def create_account(self, username):
+        client_.create_user(username, passwd, pub_info, pri_info)
+        client_.create_topic("%s_root" % (username, ))
 
     def login():
-        client_.create_session()
-        if local_db_.empty():
-            poll_message()
+        client_.create_session(username, passwd)
+        self.poll_topic()
 
     def find_user(self, username):
-        client_.
+        client_.search_user(username)
 
     def add_friend(self, user_id): 
         if user_id < self.user_id_:
