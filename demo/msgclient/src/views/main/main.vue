@@ -28,9 +28,11 @@
         methods:{
             open_topic(topic){
                 console.log('open topic ' + topic.title + ' ...');
+                this.$router.push('/topic');
             },
             add_topic(topic){
                 console.log('open topic ' + topic.title + ' ...');
+                this.$router.push('/new_topic');
             }
         }
     }
