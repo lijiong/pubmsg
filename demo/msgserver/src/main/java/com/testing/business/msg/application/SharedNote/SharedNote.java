@@ -1,5 +1,6 @@
-package com.testing.business.msg.application;
+package com.testing.business.msg.application.SharedNote;
 
+import com.testing.business.msg.domain.Message;
 import com.testing.business.msg.domain.Topic;
 
 import java.util.ArrayList;
@@ -37,9 +38,9 @@ public class SharedNote {
     long createBook(String name) {
         Book book = new Book(name);
         Topic topic = new Topic();
-        topic.userList = new ArrayList<Long>();
-
-        messageAgent.createTopic(book);
+        topic.userPermList = new ArrayList<UserPerm>();
+        topic.userPermList.add(new UserPerm(userId, 'm'));
+        messageAgent.createTopic(topic);
     }
 
     long listBook() {
@@ -51,11 +52,18 @@ public class SharedNote {
     }
 
     long createNote() {
-
+        Message msg = new Message();
+        msg.addTopic();
+        messageAgent.postMessage();
     }
 
     long updateNote() {
+        messageAgent.updateMessage();
+        
+    }
 
+    void listNote() {
+        messageAgent.searchMessage();
     }
 
 
