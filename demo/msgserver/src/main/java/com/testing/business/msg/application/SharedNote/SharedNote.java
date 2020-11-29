@@ -59,7 +59,7 @@ public class SharedNote {
 
     long updateNote() {
         messageAgent.updateMessage();
-        
+
     }
 
     void listNote() {
